@@ -4,14 +4,15 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import './ChatContent'
 import ChatContent from './ChatContent';
+import { useLocation } from 'react-router-dom';
 
 function Chat() {
-
+    var { state } = useLocation();
     var [chatContent, setChatContent] = useState(
         [
             {
                 "type": 0,
-                "content": "Xin Chao"
+                "content": `Xin Chao ${state.user}`
             }
         ]
     );
@@ -41,7 +42,7 @@ function Chat() {
 
         var data = [
             {
-                "sessionId": "b9e4bc69a0694a15b110cd7ed1e8303b",
+                "sessionId": state.user,
                 "action": "sendMessage",
                 "chatInput": inputValue
             }
