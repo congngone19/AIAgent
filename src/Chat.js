@@ -48,12 +48,12 @@ function Chat() {
         ];
         SetInputValue("");
         try {
-            var result = await fetch("https://103.27.61.96:8443/webhook/62190750-2529-43e0-ab65-30214b0039a2", {
+            var result = await fetch("https://inneduu.app.n8n.cloud/webhook/9b46392c-cc89-467d-9baf-85ed01fb3a9f", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     // "Authorization": "Basic " + btoa("ngonc:ngonc"),
-                    "test": "123"
+                    "innedu": "innedu"
                 },
                 body: JSON.stringify(data),
             }).then(response => {
